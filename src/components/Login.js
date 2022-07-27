@@ -7,11 +7,11 @@ function Login (){
             <h2>Login Form</h2>
             <form>
                 <div>
-                    <input type="text" name="username" placeholder="Username" />
+                    <input type="text" name="username" placeholder="Username" required/>
                     
                 </div>
                 <div>
-                    <input type="password" name="password" placeholder="Password" />
+                    <input type="password" name="password" placeholder="Password" required />
 
                 </div>
                 <div>
