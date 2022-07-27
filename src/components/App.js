@@ -2,6 +2,7 @@ import React, {useEffect, useState} from "react";
 import HomePage from "./HomePage";
 import Login from "./Login";
 import Navbar from "./Navbar";
+import AboutUs from "./AboutUs";
 import { BrowserRouter as Router, Routes, Route} from "react-router-dom"
 
 
@@ -20,7 +21,7 @@ function App(){
           <Routes>
 
               <Route exact path='/' element={<HomePage />}></Route>
-              {/* <Route  exact path='/posts'>{Posts}</Route> */}
+              <Route  exact path='/about'>{AboutUs}</Route>
               <Route exact path='/login' element={<Login/> }></Route>
               
           </Routes>      

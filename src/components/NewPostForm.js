@@ -1,6 +1,7 @@
-import React from "react";
+import React,{useState} from "react";
 
-export default function NewPostForm(){
+
+function NewPostForm({onHandleAddPost}){
     const [title, setTitle]=useState('')
     const [content, setContent]=useState('')
     const [author, setAuthor]=useState('')
@@ -16,14 +17,18 @@ export default function NewPostForm(){
         fetch('http://localhost:4000/posts',{
             method:"POST",
             headers:{'Context-Type':"application/json"},
-            body: JSON.stringify(newObj),
+            body: JSON.stringify(newObj)
+            
 
 
         })
         .then((response)=> response.json())
-        .then ((newData)=> onHandleAddPost(newData))
+        .then ((Data)=> console.log(Data))
+
+        
 
     }
+   
 
 
     return (
@@ -34,7 +39,7 @@ export default function NewPostForm(){
 
                 <div>
 
-                    <label>Title:</label>
+                    <label>Title:      </label>
                     <input type="text" title="title"  onChange={(e)=>setTitle(e.target.value)}/>
                 </div>
 
@@ -57,3 +62,4 @@ export default function NewPostForm(){
        
     )
 }
+export default NewPostForm;

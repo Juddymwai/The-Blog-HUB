@@ -1,6 +1,6 @@
 import React, {useState, useEffect}from "react";
-import Mojo from "./Mojo";
-// import NewPostForm from "./NewPostForm"
+// import Mojo from "./Mojo";
+ import NewPostForm from "./NewPostForm"
 
 
 function HomePage(){
@@ -33,7 +33,7 @@ function HomePage(){
                 </div>
             )
         })}
-        <Mojo onHandleAddPost={handleAddPost}/>
+        <NewPostForm onHandleAddPost={handleAddPost}/>
         
      </div>
 
