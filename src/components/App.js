@@ -1,12 +1,33 @@
 import React from "react";
 
 
-function App() {
-  return (
-    <center style={{color: "red", fontSize: 80, marginTop:30+"vh"}}>
-      <h1>Huuurrrrraaaaayyyyy</h1>
-    </center>
-  );
+
+function App(){
+    
+  return(
+      <Router>
+
+          <div>
+
+              <Navbar/>
+
+          </div>
+      
+          <Routes>
+
+              <Route exact path='/' element={<HomePage />}></Route>
+              {/* <Route  exact path='/posts'>{Posts}</Route> */}
+              <Route exact path='/login' element={<Login/> }></Route>
+              
+          </Routes>      
+      </Router>
+
+
+
+          
+      
+
+  )
 }
 
 export default App;
