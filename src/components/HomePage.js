@@ -1,10 +1,10 @@
 import React, {useState, useEffect}from "react";
-import NewPostForm from "./NewPostForm"
+// import NewPostForm from "./NewPostForm"
 
 
 function HomePage(){
     const [blogPost, setBlogPost]=useState([]);
-    // const [newBlogPost, setNewBlogPost]=useState([])
+    
 
     useEffect(()=>{
         fetch('http://localhost:4000/posts')
@@ -12,11 +12,11 @@ function HomePage(){
         .then((data)=> setBlogPost(data))
     }, [])
 
-    function handleAddPost(newData){
-        setBlogPost([...blogPost, newData])
+    // function handleAddPost(newData){
+    //     setBlogPost([...blogPost, newData])
 
         
-    }
+    // }
     
     
 
@@ -43,7 +43,7 @@ function HomePage(){
               
             )
         })}
-        <NewPostForm onHandleAddPost={handleAddPost}/>
+        {/* <NewPostForm onHandleAddPost={handleAddPost}/> */}
         
      </div>
 

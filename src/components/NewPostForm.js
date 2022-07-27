@@ -1,4 +1,5 @@
 import React, {useState} from "react";
+import {Link} from "react-router-dom"
 
 
 function NewPostForm({onHandleAddPost}){
@@ -51,7 +52,7 @@ function NewPostForm({onHandleAddPost}){
                     <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Author"  onChange={(e)=>setAuthor(e.target.value)}/>
                 </div>
            
-                <button type="submit">Submit New Post</button>
+               <Link  to="/" exact> <button type="submit">Submit New Post</button></Link>
        
 
             </form> 

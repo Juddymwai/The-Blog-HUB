@@ -1,10 +1,22 @@
-import React from "react";
+import React, {useState} from "react";
+import NewPostForm from "./NewPostForm";
 
 
 function Publish(){
+
+    const [newBlogPost, setNewBlogPost]=useState([])
+
+
+    function handleAddPost(newData){
+
+        setNewBlogPost([...newBlogPost, newData])
+
+        
+    }
     return (
         <div>
-            <h1>We as</h1>
+            
+            <NewPostForm onHandleAddPost={handleAddPost}/>
         </div>
 
     )
