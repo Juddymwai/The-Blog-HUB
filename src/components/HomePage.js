@@ -1,11 +1,10 @@
 import React, {useState, useEffect}from "react";
-// import Mojo from "./Mojo";
- import NewPostForm from "./NewPostForm"
+import NewPostForm from "./NewPostForm"
 
 
 function HomePage(){
     const [blogPost, setBlogPost]=useState([]);
-    const [newBlogPost, setNewBlogPost]=useState([])
+    // const [newBlogPost, setNewBlogPost]=useState([])
 
     useEffect(()=>{
         fetch('http://localhost:4000/posts')
@@ -16,7 +15,7 @@ function HomePage(){
     function handleAddPost(newData){
         setBlogPost([...blogPost, newData])
 
-        console.log(newData)
+        
     }
     
     
@@ -26,7 +25,7 @@ function HomePage(){
         <h1>Blogs </h1>
         {blogPost.map((post) => {
             return (
-                <div style={{marginBottom: 50+"px"}}>
+                <div style={{marginBottom: 50+"px"}} key={post.id}>
                     <h2>{post.Title}</h2>
                     <div>{post.Content} </div>
                      <h3>By: {post.Author}</h3>

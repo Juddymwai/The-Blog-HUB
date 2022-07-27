@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from "react";
+import React from "react";
 import HomePage from "./HomePage";
 import Login from "./Login";
 import Navbar from "./Navbar";
@@ -20,9 +20,9 @@ function App(){
       
           <Routes>
 
-              <Route exact path='/' element={<HomePage />}></Route>
-              <Route  exact path='/about'>{AboutUs}</Route>
-              <Route exact path='/login' element={<Login/> }></Route>
+            <Route exact path='/' element={<HomePage />}></Route>
+            <Route  exact path='/about' element={<AboutUs/>}></Route>
+            <Route exact path='/login' element={<Login/> }></Route>
               
           </Routes>      
       </Router>

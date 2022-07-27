@@ -1,4 +1,4 @@
-import React,{useState} from "react";
+import React, {useState} from "react";
 
 
 function NewPostForm({onHandleAddPost}){
@@ -9,22 +9,19 @@ function NewPostForm({onHandleAddPost}){
     function handleSubmit(e){
         e.preventDefault()
 
-        const newObj ={
+        const newObj = {
             "Title":title,
             "Content":content,
             "Author": author
         }
-        fetch('http://localhost:4000/posts',{
-            method:"POST",
-            headers:{'Context-Type':"application/json"},
+        fetch("http://localhost:4000/posts", {
+            method: "POST",
+            headers: {"Content-Type":"application/json"},
             body: JSON.stringify(newObj)
-            
-
 
         })
-        .then((response)=> response.json())
-        .then ((Data)=> console.log(Data))
-
+        .then((resp) => resp.json())
+        .then((newBlog) => onHandleAddPost(newBlog))
         
 
     }
