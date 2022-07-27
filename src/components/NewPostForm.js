@@ -29,26 +29,26 @@ function NewPostForm({onHandleAddPost}){
 
 
     return (
-        <div>
-            <h1>Posts</h1>
+        <div style={{margin: 50+ "px"}}>
+            <h1 style={{textAlign:"center", marginTop: 50 +"px"}}>Create A New Posts</h1>
 
-            <form className='newPost' onSubmit={handleSubmit}>
+            <form class="mb-3" onSubmit={handleSubmit}>
 
                 <div>
 
-                    <label>Title:      </label>
-                    <input type="text" title="title"  onChange={(e)=>setTitle(e.target.value)}/>
+                    <label for="exampleFormControlInput1" class="form-label">Title:      </label>
+                    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Title"  onChange={(e)=>setTitle(e.target.value)}/>
                 </div>
 
-                <div>
-                    <label>Content: </label>
-                    <input type="text" content="content" onChange={(e)=>setContent(e.target.value)}/>
+                <div class="mb-3">
+                    <label  for="exampleFormControlTextarea1" class="form-label">Content: </label>
+                    <textarea type="text" class="form-control" id="exampleFormControlTextarea1" rows="3" onChange={(e)=>setContent(e.target.value)}/>
                 </div>
 
-                <div>
-                    <label>Author: </label>
+                <div class="mb-3">
+                    <label >Author: </label>
 
-                    <input type="text" author="author"  onChange={(e)=>setAuthor(e.target.value)}/>
+                    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Author"  onChange={(e)=>setAuthor(e.target.value)}/>
                 </div>
            
                 <button type="submit">Submit New Post</button>
