@@ -13,11 +13,9 @@ function Login (){
 
                 </div>
                 <div>
-                    <input type="submit" value="Submit" />
+                    <input type="submit" value="Submit"/>
 
                 </div>
-
-                
                 
             </form>
             
