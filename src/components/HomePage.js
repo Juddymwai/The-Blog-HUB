@@ -1,6 +1,6 @@
 import React, {useState, useEffect}from "react";
 import Mojo from "./Mojo";
-import NewPostForm from "./NewPostForm"
+// import NewPostForm from "./NewPostForm"
 
 
 function HomePage(){
