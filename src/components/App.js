@@ -1,4 +1,8 @@
-import React from "react";
+import React, {useEffect, useState} from "react";
+import HomePage from "./HomePage";
+import Login from "./Login";
+import Navbar from "./Navbar";
+import { BrowserRouter as Router, Routes, Route} from "react-router-dom"
 
 
 
