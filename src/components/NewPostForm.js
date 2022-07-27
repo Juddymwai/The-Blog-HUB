@@ -28,7 +28,32 @@ export default function NewPostForm(){
 
     return (
         <div>
+            <h1>Posts</h1>
 
+            <form className='newPost' onSubmit={handleSubmit}>
+
+                <div>
+
+                    <label>Title:</label>
+                    <input type="text" title="title"  onChange={(e)=>setTitle(e.target.value)}/>
+                </div>
+
+                <div>
+                    <label>Content: </label>
+                    <input type="text" content="content" onChange={(e)=>setContent(e.target.value)}/>
+                </div>
+
+                <div>
+                    <label>Author: </label>
+
+                    <input type="text" author="author"  onChange={(e)=>setAuthor(e.target.value)}/>
+                </div>
+           
+                <button type="submit">Submit New Post</button>
+       
+
+            </form> 
         </div>
+       
     )
 }
