@@ -25,11 +25,26 @@ function HomePage(){
         <h1>Blogs </h1>
         {blogPost.map((post) => {
             return (
-                <div style={{marginBottom: 50+"px"}} key={post.id}>
-                    <h2>{post.Title}</h2>
-                    <div>{post.Content} </div>
-                     <h3>By: {post.Author}</h3>
+                // <div class="card" style={{marginBottom: 50+"px"}} key={post.id}>
+                //     <h3 class="card-header">{post.Title}</h3>
+                //     <div class="card-body">{post.Content} </div>
+                //      <h4>By: {post.Author}</h4>
+                // </div>
+                <div class="card text-center"  key={post.id}>
+                <div class="card-header">
+                  Featured
                 </div>
+                <div class="card-body">
+                  <h5 class="card-title">{post.Title}</h5>
+                  <p class="card-text">{post.Content}</p>
+                  <h4 class="btn btn-primary">By {post.Author}</h4>
+                </div>
+                <div class="card-footer text-muted">
+                  2 days ago
+                </div>
+              </div>
+              
+              
             )
         })}
         <NewPostForm onHandleAddPost={handleAddPost}/>
