@@ -1,7 +1,7 @@
 import React from "react";
 
 
-function AboutUs(){
+function Publish(){
     return (
         <div>
             <h1>We as</h1>
@@ -10,4 +10,4 @@ function AboutUs(){
     )
 }
 
-export default AboutUs;
+export default Publish;

@@ -12,7 +12,7 @@ function Navbar(){
                 <Link to="/" exact class="nav-link active" aria-current="page" href="#">HomePage</Link>
             </li>
             <li class="nav-item">
-                <Link  to="/about" exact class="nav-link" href="#">About Us</Link>
+                <Link  to="/about" exact class="nav-link" href="#">Publish</Link>
             </li>
             <li class="nav-item">
                 <Link  to="/login" class="nav-link" href="#">Login</Link>

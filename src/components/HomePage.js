@@ -25,11 +25,7 @@ function HomePage(){
         <h1>Blogs </h1>
         {blogPost.map((post) => {
             return (
-                // <div class="card" style={{marginBottom: 50+"px"}} key={post.id}>
-                //     <h3 class="card-header">{post.Title}</h3>
-                //     <div class="card-body">{post.Content} </div>
-                //      <h4>By: {post.Author}</h4>
-                // </div>
+               
                 <div class="card text-center"  key={post.id}>
                 <div class="card-header">
                   Featured
