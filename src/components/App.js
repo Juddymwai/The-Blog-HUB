@@ -2,8 +2,8 @@ import React from "react";
 import HomePage from "./HomePage";
 import Login from "./Login";
 import Navbar from "./Navbar";
-
 import Publish from "./Publish";
+import Footer from "./Footer"
 import { BrowserRouter as Router, Routes, Route} from "react-router-dom"
 
 
@@ -16,9 +16,10 @@ function App(){
     <div style={{background: ""}}>
       <Router >
 
-          <div style={{background: "grey"}}>
+          <div style={{background: " black"}}>
 
               <Navbar/>
+              
 
           </div>
       
@@ -30,6 +31,7 @@ function App(){
               
           </Routes>      
       </Router>
+      <Footer/>
       </div>
 
 
