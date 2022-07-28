@@ -1,5 +1,5 @@
 import React, {useState, useEffect}from "react";
-// import NewPostForm from "./NewPostForm"
+
 
 
 function HomePage(){
@@ -12,17 +12,12 @@ function HomePage(){
         .then((data)=> setBlogPost(data))
     }, [])
 
-    // function handleAddPost(newData){
-    //     setBlogPost([...blogPost, newData])
-
-        
-    // }
     
     
 
     return (
-     <div>
-        <h1>Blogs </h1>
+     <div style={{margin:"auto", width:'60%', marginTop: 50 +"px"}}>
+        <h1></h1>
         {blogPost.map((post) => {
             return (
                

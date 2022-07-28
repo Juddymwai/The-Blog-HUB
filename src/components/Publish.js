@@ -14,7 +14,7 @@ function Publish(){
         
     }
     return (
-        <div>
+        <div >
             
             <NewPostForm onHandleAddPost={handleAddPost}/>
         </div>

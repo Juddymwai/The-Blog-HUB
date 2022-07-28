@@ -3,7 +3,7 @@ import { Link} from "react-router-dom"
 
 function Navbar(){
     return(
-        <div>
+        <div style={{padding: 30+"px"}}>
 
             <ul class="nav nav-pills" style={{marginTop:20 +"px", marginLeft:1.6 + "em"}}>
             <li class="nav-item">

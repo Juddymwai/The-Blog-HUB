@@ -13,15 +13,16 @@ function App(){
   
     
   return(
-      <Router>
+    <div style={{background: ""}}>
+      <Router >
 
-          <div>
+          <div style={{background: "grey"}}>
 
               <Navbar/>
 
           </div>
       
-          <Routes>
+          <Routes >
 
             <Route exact path='/' element={<HomePage />}></Route>
             <Route  exact path='/publish' element={<Publish/>}></Route>
@@ -29,6 +30,7 @@ function App(){
               
           </Routes>      
       </Router>
+      </div>
 
 
 

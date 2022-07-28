@@ -30,10 +30,10 @@ function NewPostForm({onHandleAddPost}){
 
 
     return (
-        <div style={{margin: 50+ "px"}}>
+        <div style={{margin:"auto", width:'60%', height: 100+"vh"}}>
             <h1 style={{textAlign:"center", marginTop: 50 +"px"}}>Create A New Post</h1>
 
-            <form class="mb-3" onSubmit={handleSubmit}>
+            <form className="mb-3" onSubmit={handleSubmit}>
 
                 <div>
 
@@ -41,12 +41,12 @@ function NewPostForm({onHandleAddPost}){
                     <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Title"  onChange={(e)=>setTitle(e.target.value)}/>
                 </div>
 
-                <div class="mb-3">
+                <div className="mb-3">
                     <label  for="exampleFormControlTextarea1" class="form-label">Content: </label>
                     <textarea type="text" class="form-control" id="exampleFormControlTextarea1" rows="3" onChange={(e)=>setContent(e.target.value)}/>
                 </div>
 
-                <div class="mb-3">
+                <div className="mb-3">
                     <label >Author: </label>
 
                     <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Author"  onChange={(e)=>setAuthor(e.target.value)}/>
