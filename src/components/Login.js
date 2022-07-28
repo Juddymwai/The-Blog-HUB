@@ -15,7 +15,7 @@ function Login (){
 
                 </div>
                 <div>
-                    <Link to="/"><input type="submit" value="Submit"/> </Link>
+                    <Link to="/publish"><input type="submit" value="Submit"/> </Link>
 
                 </div>
                 
@@ -26,6 +26,7 @@ function Login (){
             
 
         </div>
+        
     )
 }
 

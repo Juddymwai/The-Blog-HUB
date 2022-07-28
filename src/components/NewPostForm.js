@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import {Link} from "react-router-dom"
+// import {Link} from "react-router-dom"
 
 
 function NewPostForm({onHandleAddPost}){
@@ -31,7 +31,7 @@ function NewPostForm({onHandleAddPost}){
 
     return (
         <div style={{margin: 50+ "px"}}>
-            <h1 style={{textAlign:"center", marginTop: 50 +"px"}}>Create A New Posts</h1>
+            <h1 style={{textAlign:"center", marginTop: 50 +"px"}}>Create A New Post</h1>
 
             <form class="mb-3" onSubmit={handleSubmit}>
 
@@ -52,7 +52,7 @@ function NewPostForm({onHandleAddPost}){
                     <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Author"  onChange={(e)=>setAuthor(e.target.value)}/>
                 </div>
            
-               <Link  to="/" exact> <button type="submit">Submit New Post</button></Link>
+               <button type="submit">Submit New Post</button>
        
 
             </form> 
