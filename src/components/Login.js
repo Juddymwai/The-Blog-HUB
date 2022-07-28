@@ -4,6 +4,7 @@ import {Link} from "react-router-dom"
 function Login (){
     return (
         <div style={{margin:"auto", width:'60%' , marginTop: 50 +"px", height: 100+"vh"}}>
+            <h2 style={{textAlign:"center"}}>Login Page</h2>
             <form>
                 <div className="mb-3">
                     <label for="exampleInputEmail1" class="form-label">Email address</label>

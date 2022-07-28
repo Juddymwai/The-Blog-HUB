@@ -16,12 +16,13 @@ function HomePage(){
     
 
     return (
-     <div style={{margin:"auto", width:'60%', marginTop: 50 +"px"}}>
-        <h1></h1>
-        {blogPost.map((post) => {
+     <div style={{margin:"auto", width:'60%', marginTop: 50 +"px", marginBottom: 30+ "px"}}>
+        <h3 style={{textAlign:'center'}}>Read Blogs From Various Developers</h3>
+        <div style={{overflow:'scroll', height: 700+ "px"}}>
+            {blogPost.map((post) => {
             return (
                
-                <div class="card text-center"  key={post.id}>
+                <div style={{marginBottom: 20+"px"}} class="card text-center"  key={post.id}>
                 <div class="card-header">
                   Featured
                 </div>
@@ -38,6 +39,8 @@ function HomePage(){
               
             )
         })}
+        </div>
+
         {/* <NewPostForm onHandleAddPost={handleAddPost}/> */}
         
      </div>
