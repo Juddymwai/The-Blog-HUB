@@ -21,6 +21,8 @@ function NewPostForm({onHandleAddPost, setIsFilledIn}){
          e.preventDefault()
         //  setIsFilledIn(true)
         //  history.push("/")
+        e.target.reset();
+
     
         const newObj = {
             "Title":title,
@@ -34,9 +36,9 @@ function NewPostForm({onHandleAddPost, setIsFilledIn}){
 
         })
         .then((resp) => resp.json())
-        .then((newBlog) => onHandleAddPost(newBlog)
-        
-    )
+        .then((newBlog) => onHandleAddPost(newBlog) )
+
+        alert("You have a new Post Added")
         
 
     }

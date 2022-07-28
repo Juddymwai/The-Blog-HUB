@@ -2,6 +2,10 @@ import React from "react"
 import {Link} from "react-router-dom"
 
 function Login (){
+    function handleAlert(e){
+        e.preventDefault()
+        alert("Welcome Back!")
+    }
     return (
         <div style={{margin:"auto", width:'60%' , marginTop: 50 +"px", height: 100+"vh"}}>
             <h2 style={{textAlign:"center"}}>Login Page</h2>
@@ -19,7 +23,9 @@ function Login (){
                     <input type="checkbox" class="form-check-input" id="exampleCheck1"/>
                     <label class="form-check-label" for="exampleCheck1">Check me out</label>
                 </div>
-                <Link to="/publish"><input type="submit" value="Submit" required/> </Link>
+                {/* <Link to="/publish"> */}
+                    <input type="submit" value="Submit"  onClick={handleAlert}required/>
+                     {/* </Link> */}
             </form>
         </div>
         
