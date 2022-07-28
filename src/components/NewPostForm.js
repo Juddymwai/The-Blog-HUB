@@ -15,7 +15,7 @@ function NewPostForm({onHandleAddPost}){
             "Content":content,
             "Author": author
         }
-        fetch("http://localhost:4000/posts", {
+        fetch("https://cliff-cookie-bandicoot.glitch.me/posts", {
             method: "POST",
             headers: {"Content-Type":"application/json"},
             body: JSON.stringify(newObj)

@@ -7,7 +7,7 @@ function HomePage(){
     
 
     useEffect(()=>{
-        fetch('http://localhost:4000/posts')
+        fetch('https://cliff-cookie-bandicoot.glitch.me/posts')
         .then((r)=> r.json())
         .then((data)=> setBlogPost(data))
     }, [])
@@ -26,10 +26,10 @@ function HomePage(){
                 <div class="card-header">
                   Featured
                 </div>
-                <div class="card-body">
-                  <h5 class="card-title">{post.Title}</h5>
-                  <p class="card-text">{post.Content}</p>
-                  <h4 class="btn btn-primary">By {post.Author}</h4>
+                <div className="card-body">
+                  <h5 className="card-title">{post.Title}</h5>
+                  <p className="card-text">{post.Content}</p>
+                  <h4 className="btn btn-primary">By {post.Author}</h4>
                 </div>
                 <div class="card-footer text-muted">
                   2 days ago
