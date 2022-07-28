@@ -1,14 +1,26 @@
 import React, {useState} from "react";
-// import {Link} from "react-router-dom"
+// import {useNavigate} from "react-router-dom"
 
 
 function NewPostForm({onHandleAddPost}){
+    // const navigate= useNavigate();
+    // const navigateHome=()=>{
+    //     navigate('/')
+    // }
+   
+   
+
+    
     const [title, setTitle]=useState('')
     const [content, setContent]=useState('')
     const [author, setAuthor]=useState('')
 
+
+
     function handleSubmit(e){
-        e.preventDefault()
+        // e.preventDefault()
+        
+       
 
         const newObj = {
             "Title":title,
@@ -26,8 +38,7 @@ function NewPostForm({onHandleAddPost}){
         
 
     }
-   
-
+    
 
     return (
         <div style={{margin:"auto", width:'60%', height: 100+"vh"}}>
@@ -43,7 +54,7 @@ function NewPostForm({onHandleAddPost}){
 
                 <div className="mb-3">
                     <label  for="exampleFormControlTextarea1" class="form-label">Content: </label>
-                    <textarea type="text" class="form-control" id="exampleFormControlTextarea1" rows="3" onChange={(e)=>setContent(e.target.value)} required/>
+                    <textarea type="text" class="form-control" id="exampleFormControlTextarea1" rows="5" onChange={(e)=>setContent(e.target.value)} required/>
                 </div>
 
                 <div className="mb-3">

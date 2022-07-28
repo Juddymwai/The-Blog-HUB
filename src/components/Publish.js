@@ -2,6 +2,7 @@ import React, {useState} from "react";
 import NewPostForm from "./NewPostForm";
 
 
+
 function Publish(){
 
     const [newBlogPost, setNewBlogPost]=useState([])
@@ -13,6 +14,7 @@ function Publish(){
 
         
     }
+    
     return (
         <div >
             
