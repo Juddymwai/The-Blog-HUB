@@ -1,8 +1,8 @@
 import React, {useState} from "react";
-// import {useNavigate} from "react-router-dom"
+// import {useHistory} from "react-router-dom"
 
 
-function NewPostForm({onHandleAddPost}){
+function NewPostForm({onHandleAddPost, setIsFilledIn}){
     // const navigate= useNavigate();
     // const navigateHome=()=>{
     //     navigate('/')
@@ -10,7 +10,7 @@ function NewPostForm({onHandleAddPost}){
    
    
 
-    
+    // const history = useHistory();
     const [title, setTitle]=useState('')
     const [content, setContent]=useState('')
     const [author, setAuthor]=useState('')
@@ -18,10 +18,10 @@ function NewPostForm({onHandleAddPost}){
 
 
     function handleSubmit(e){
-        // e.preventDefault()
-        
-       
-
+         e.preventDefault()
+        //  setIsFilledIn(true)
+        //  history.push("/")
+    
         const newObj = {
             "Title":title,
             "Content":content,
@@ -34,7 +34,9 @@ function NewPostForm({onHandleAddPost}){
 
         })
         .then((resp) => resp.json())
-        .then((newBlog) => onHandleAddPost(newBlog))
+        .then((newBlog) => onHandleAddPost(newBlog)
+        
+    )
         
 
     }
