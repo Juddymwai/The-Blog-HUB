@@ -9,7 +9,7 @@ function Login (){
     return (
         <div style={{margin:"auto", width:'60%' , marginTop: 50 +"px", height: 100+"vh"}}>
             <h2 style={{textAlign:"center"}}>Login Page</h2>
-            <form>
+            <form onSubmit={handleAlert}>
                 <div className="mb-3">
                     <label for="exampleInputEmail1" class="form-label">Email address</label>
                     <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required/>
@@ -24,7 +24,7 @@ function Login (){
                     <label class="form-check-label" for="exampleCheck1">Check me out</label>
                 </div>
                 {/* <Link to="/publish"> */}
-                    <input type="submit" value="Submit"  onClick={handleAlert}required/>
+                    <input type="submit" value="Submit"  required/>
                      {/* </Link> */}
             </form>
         </div>
