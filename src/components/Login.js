@@ -3,36 +3,30 @@ import React, {useState} from "react"
 
 function Login ({LogIn}){
 
-    const [input, setInput]=useState({
-        email:"",
-        password:""
-    })
+    // const [input, setInput]=useState({
+    //     email:"",
+    //     password:""
+    // })
 
-
-    function handleAlert(e){
+    function handleSubmit(e){
         e.preventDefault()
-        console.log("long")
-        // alert("Welcome Back!")
-        LogIn(input)
-
-
-  
+        e.target.reset()
+        alert("Welcome back")
     }
-
     
 
     return (
         <div style={{margin:"auto", width:'60%' , marginTop: 50 +"px", height: 100+"vh"}}>
             <h2 style={{textAlign:"center"}}>Login Page</h2>
-            <form onSubmit={handleAlert}>
+            <form onSubmit={handleSubmit}>
                 <div className="mb-3">
-                    <label  className="form-label">Email address</label>
-                    <input type="email"  name="email" value={input.email} class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" onChange={(e)=> setInput({...input, email: e.target.value})} required/>
+                    <label  className="form-label" for="exampleFormControlInput1">Email address</label>
+                    <input type="email"  name="email"  class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required/>
                     <div id="emailHelp" className="form-text">We'll never share your email with anyone else.</div>
                 </div>
                 <div className="mb-3">
-                    <label  className="form-label">Password</label>
-                    <input type="password" name="password" value={input.password} class="form-control" id="exampleInputPassword1"  onChange= {(e) => setInput({...input, password: e.target.value})} required/>
+                    <label for="exampleFormControlInput1" className="form-label">Password</label>
+                    <input type="password" name="password"  class="form-control" id="exampleInputPassword1"   required/>
                 </div>
                 <div className="mb-3 form-check">
                     <input type="checkbox" class="form-check-input" id="exampleCheck1"/>

@@ -6,9 +6,7 @@ import NewPostForm from "./NewPostForm";
 function Publish(){
 
     const [newBlogPost, setNewBlogPost]=useState([])
-    const [user, setUser]=useState({
-        email:"",
-    })
+    const [user, setUser]=useState([])
 
     const admin={
         email:"admin@gmail.com",
@@ -20,20 +18,20 @@ function Publish(){
         console.log(input)
 
          
-            if (input.email == admin.email && input.password == admin.password){
+            // if (input.email == admin.email && input.password == admin.password){
                     
-                setUser({
+            //     setUser({
 
-                    email: input.email,
-                    password: input.password
-                })
+            //         email: input.email,
+            //         password: input.password
+            //     })
                 
 
-            }
+            // }
 
-            else{
-                    setUser("details")
-                }
+            // else{
+            //         setUser("details")
+            //     }
         
 
     }
@@ -48,7 +46,8 @@ function Publish(){
     
     return (
         <div >
-            {(user.email !== "") ? (<NewPostForm onHandleAddPost={handleAddPost}/>) : (<LogIn LogIn = {LogIn}/>) }
+            {/* {(user.email !== "") ? ("") : (<LogIn LogIn = {LogIn}/>) } */}
+            <NewPostForm onHandleAddPost={handleAddPost}/>
         </div>
 
     )

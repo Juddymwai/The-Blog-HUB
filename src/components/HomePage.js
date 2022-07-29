@@ -20,15 +20,14 @@ function HomePage(){
         <h3 style={{textAlign:'center'}}>Read Blogs From Various Developers</h3>
         <div style={{overflow:'scroll', height: 700+ "px"}}>
             {blogPost.map((post) => {
-            return (
-               
+            return (          
                 <div style={{marginBottom: 20+"px"}} class="card text-center"  key={post.id}>
                 <div class="card-header">
                   Featured
                 </div>
                 <div className="card-body">
                   <h5 className="card-title">{post.Title}</h5>
-                  <p classNAME="card-text">{post.Content}</p>
+                  <p className="card-text">{post.Content}</p>
                   <h4 class="btn btn-primary">By {post.Author}</h4>
                 </div>
                 <div class="card-footer text-muted">
