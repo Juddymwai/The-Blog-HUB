@@ -1,31 +1,45 @@
-import React from "react"
+import React, {useState} from "react"
 // import {Link} from "react-router-dom"
 
-function Login (){
+function Login ({LogIn}){
+
+    const [input, setInput]=useState({
+        email:"",
+        password:""
+    })
+
+
     function handleAlert(e){
         e.preventDefault()
-        alert("Welcome Back!")
-        
+        console.log("long")
+        // alert("Welcome Back!")
+        LogIn(input)
+
+
+  
     }
+
+    
+
     return (
         <div style={{margin:"auto", width:'60%' , marginTop: 50 +"px", height: 100+"vh"}}>
             <h2 style={{textAlign:"center"}}>Login Page</h2>
             <form onSubmit={handleAlert}>
                 <div className="mb-3">
-                    <label for="exampleInputEmail1" class="form-label">Email address</label>
-                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required/>
-                    <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                    <label  className="form-label">Email address</label>
+                    <input type="email"  name="email" value={input.email} class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" onChange={(e)=> setInput({...input, email: e.target.value})} required/>
+                    <div id="emailHelp" className="form-text">We'll never share your email with anyone else.</div>
                 </div>
                 <div className="mb-3">
-                    <label for="exampleInputPassword1" class="form-label">Password</label>
-                    <input type="password" class="form-control" id="exampleInputPassword1" required/>
+                    <label  className="form-label">Password</label>
+                    <input type="password" name="password" value={input.password} class="form-control" id="exampleInputPassword1"  onChange= {(e) => setInput({...input, password: e.target.value})} required/>
                 </div>
                 <div className="mb-3 form-check">
                     <input type="checkbox" class="form-check-input" id="exampleCheck1"/>
-                    <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                    <label className="form-check-label" for="exampleCheck1">Check me out</label>
                 </div>
                 {/* <Link to="/publish"> */}
-                    <input type="submit" value="Submit"  required/>
+                    <input type="submit" value="Submit" />
                      {/* </Link> */}
             </form>
         </div>

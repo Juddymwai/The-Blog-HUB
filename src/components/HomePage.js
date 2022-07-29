@@ -28,8 +28,8 @@ function HomePage(){
                 </div>
                 <div className="card-body">
                   <h5 className="card-title">{post.Title}</h5>
-                  <p className="card-text">{post.Content}</p>
-                  <h4 className="btn btn-primary">By {post.Author}</h4>
+                  <p classNAME="card-text">{post.Content}</p>
+                  <h4 class="btn btn-primary">By {post.Author}</h4>
                 </div>
                 <div class="card-footer text-muted">
                   2 days ago
